@@ -374,7 +374,7 @@
     }
     .fear-item {
       min-height: 180px;
-      padding: clamp(22px, 3vw, 30px);
+      padding: clamp(24px, 3vw, 30px);
       border: 1px solid rgba(247, 248, 241, .18);
       border-radius: 10px;
       background: rgba(247, 248, 241, .055);
@@ -382,45 +382,39 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 12px;
+      gap: 13px;
       text-align: center;
     }
     .fear-item.highlight {
       grid-column: 1 / -1;
-      min-height: 194px;
-      padding: clamp(28px, 4vw, 42px);
       border: 2px solid var(--lime);
-      border-radius: 10px;
       background: var(--lime);
       color: var(--lime-ink);
       box-shadow: 0 14px 36px rgba(213, 255, 49, .12);
     }
     .fear-label,
-    .fear-close { display: block; max-width: 520px; line-height: 1.38; }
+    .fear-close {
+      display: block;
+      max-width: 520px;
+      text-align: center;
+      text-wrap: balance;
+      hyphens: none;
+    }
     .fear-label {
       color: #f7f8f1;
       font-size: clamp(19px, 1.9vw, 25px);
+      line-height: 1.24;
       font-weight: 800;
       letter-spacing: -.025em;
     }
     .fear-close {
       color: #c0c3b9;
       font-size: clamp(16px, 1.45vw, 19px);
+      line-height: 1.42;
     }
     .fear-item.highlight .fear-label,
     .fear-item.highlight .fear-close { color: var(--lime-ink); }
-    .fear-item.highlight .fear-label { font-size: clamp(22px, 2.3vw, 30px); }
-    .fear-item.highlight .fear-close { font-weight: 850; }
-    .fee-note {
-      margin: 28px 0 0;
-      padding: 20px 22px;
-      background: var(--lime);
-      color: var(--lime-ink);
-      border-radius: 8px;
-      font-size: clamp(18px, 1.8vw, 22px);
-      line-height: 1.4;
-      font-weight: 800;
-    }
+    .fear-item.highlight .fear-close { font-weight: 750; }
     .social-block { background: var(--paper); }
     .social-links {
       display: grid;
@@ -627,9 +621,13 @@
       .book-offer { padding: 38px 22px; }
       .recap-list li { grid-template-columns: 42px minmax(0, 1fr); gap: 10px; }
       .about-avatar { width: 132px; height: 132px; }
-      .fear-list { grid-template-columns: 1fr; }
-      .fear-item { min-height: 0; padding: 24px 18px; }
-      .fear-item.highlight { grid-column: auto; min-height: 0; padding: 30px 20px; }
+      .fear-list { grid-template-columns: 1fr; gap: 10px; }
+      .fears-title { text-align: center; text-wrap: balance; }
+      .fear-item,
+      .fear-item.highlight { min-height: 0; padding: 26px 20px; }
+      .fear-item.highlight { grid-column: auto; }
+      .fear-label { font-size: 21px; line-height: 1.22; }
+      .fear-close { font-size: 16px; line-height: 1.4; }
       .social-link { padding: 21px 19px; }
       .book-offer h2 { font-size: clamp(44px, 13.5vw, 62px); }
       .book-offer::after { top: 4px; right: -16px; font-size: 180px; }
@@ -813,16 +811,15 @@
           <p class="pain-echo"><span>Прочитал гайд - теперь видишь все ловушки.</span><span>И от этого только страшнее идти одному: цену в договоре могут подменить, а подписанное уже не отыграешь.</span></p>
           <h3 class="fears-title">Мы закрываем каждый страх:</h3>
           <ul class="fear-list">
-            <li class="fear-item"><span class="fear-label">Боишься, что в договоре окажется другая цена</span><span class="fear-close">доводим цену под ключ письменно и чистим договор от допов</span></li>
-            <li class="fear-item"><span class="fear-label">Боишься допов, которые уже установлены</span><span class="fear-close">читаем каждую строку до подписания</span></li>
-            <li class="fear-item"><span class="fear-label">Боишься, что накрутят ставку</span><span class="fear-close">проверяем ставку независимо</span></li>
-            <li class="fear-item"><span class="fear-label">Боишься неподъёмного платежа</span><span class="fear-close">считаем под твою историю, если можно уменьшить - знаем как</span></li>
-            <li class="fear-item"><span class="fear-label">Боишься отдать свою машину за бесценок</span><span class="fear-close">оцениваем трейд-ин заранее</span></li>
+            <li class="fear-item"><span class="fear-label">Боишься, что в договоре окажется другая цена</span><span class="fear-close">фиксируем цену «под ключ» письменно и убираем из договора лишние доплаты</span></li>
+            <li class="fear-item"><span class="fear-label">Боишься допов, которые уже установлены</span><span class="fear-close">проверяем каждую строку договора до подписания</span></li>
+            <li class="fear-item"><span class="fear-label">Боишься, что накрутят ставку</span><span class="fear-close">проверяем ставку независимо от дилера</span></li>
+            <li class="fear-item"><span class="fear-label">Боишься неподъёмного платежа</span><span class="fear-close">считаем платёж под твою ситуацию. Если его можно уменьшить - знаем как</span></li>
+            <li class="fear-item"><span class="fear-label">Боишься отдать свою машину за бесценок</span><span class="fear-close">оцениваем твою машину заранее</span></li>
             <li class="fear-item"><span class="fear-label">Боишься выбрать не ту машину</span><span class="fear-close">помогаем выбрать под запрос и бюджет</span></li>
             <li class="fear-item"><span class="fear-label">Боишься мариновать весь день в салоне</span><span class="fear-close">ведём онлайн, приезжаешь только подписать и забрать</span></li>
-            <li class="fear-item highlight"><span class="fear-label">Боишься, что брокер накрутит</span><span class="fear-close">за новые авто через дилера денег с тебя не берём</span></li>
+            <li class="fear-item highlight"><span class="fear-label">Боишься скрытых комиссий?</span><span class="fear-close">За новый автомобиль ты нам ничего не платишь. Подбор с аукциона или б/у - $1,000.</span></li>
           </ul>
-          <p class="fee-note">Подбор авто с аукциона или БУ - $1,000</p>
         </div>
       </article>
 
