@@ -31,22 +31,22 @@
 
     @media (prefers-color-scheme: dark) {
       :root {
-        --page: #11120f;
-        --paper: #181a16;
-        --ink: #f1f2eb;
-        --muted: #aeb0a6;
-        --line: #363832;
-        --dark: #eef0e7;
-        --dark-ink: #151711;
-        --dark-muted: #4d5049;
-        --lime: #c8f52d;
-        --lime-ink: #11130d;
-        --warn: #ff6a49;
-        --warn-soft: #3a201a;
-        --blue: #8ca7ff;
-        --blue-soft: #1d284d;
-        --white: #1d1f1b;
-        --shadow: 0 22px 62px rgba(0, 0, 0, .34);
+        --page: #f2f1ec;
+        --paper: #fbfaf6;
+        --ink: #141512;
+        --muted: #64665f;
+        --line: #d4d2c8;
+        --dark: #191b17;
+        --dark-ink: #f7f8f1;
+        --dark-muted: #c0c3b9;
+        --lime: #d5ff31;
+        --lime-ink: #12140e;
+        --warn: #ff5f3a;
+        --warn-soft: #ffe1d7;
+        --blue: #2e5bea;
+        --blue-soft: #e7ecff;
+        --white: #fff;
+        --shadow: 0 18px 52px rgba(25, 27, 23, .08);
       }
     }
 
@@ -656,11 +656,32 @@
     }
     .personal-cta .primary-action {
       width: min(100%, 590px);
+      min-height: 56px;
       margin-top: clamp(26px, 4vw, 40px);
-      background: #171711;
-      color: #f7f8f1;
+      padding: 16px 20px;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 12px;
+      background: #171A14;
+      color: #fff;
+      box-shadow: none;
+      font-size: 16px;
+      line-height: 1.25;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: background-color .18s ease;
     }
-    .personal-cta .primary-action:hover { background: #2d2e28; }
+    .personal-cta .primary-action:hover { background: #23271f; }
+    .personal-cta .primary-action:active { background: #0f110d; }
+    .personal-cta .primary-action:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 4px;
+    }
+    .cta-whatsapp-icon {
+      width: 22px;
+      height: 22px;
+      flex: 0 0 22px;
+    }
 
     @media (max-width: 820px) {
       .page-shell { padding: 14px 12px 64px; }
@@ -718,6 +739,259 @@
       .primary-action { padding: 18px; }
     }
 
+    /* Draft refinement: mobile reading, phrase cards and compact ending */
+    .card,
+    .phrase-card,
+    .service-card { padding: 24px; }
+    .signal-label {
+      display: inline-flex;
+      width: fit-content;
+      padding: 7px 9px 6px;
+      border-radius: 4px;
+      background: var(--lime);
+      color: var(--lime-ink) !important;
+    }
+    .phrase-card {
+      padding: 24px;
+      border-radius: var(--radius-card);
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--ink);
+    }
+    .phrase-original {
+      margin: 18px 0 0;
+      max-width: 920px;
+      font-size: clamp(22px, 2.5vw, 31px);
+      line-height: 1.28;
+      font-weight: 750;
+      letter-spacing: -.025em;
+    }
+    .phrase-translation {
+      margin: 14px 0 0;
+      max-width: 820px;
+      color: var(--muted);
+      font-size: clamp(17px, 1.8vw, 20px);
+      line-height: 1.5;
+    }
+    .copy-button {
+      margin-top: 22px;
+      padding: 11px 15px;
+      border: 1px solid var(--ink);
+      border-radius: 6px;
+      background: transparent;
+      color: var(--ink);
+      font-weight: 750;
+      cursor: pointer;
+    }
+    .copy-button:hover { background: var(--lime); color: var(--lime-ink); border-color: var(--lime-ink); }
+    .copy-button.copied { background: var(--lime); color: var(--lime-ink); border-color: var(--lime-ink); }
+    .copy-button:focus-visible { outline: 3px solid var(--warn); outline-offset: 3px; }
+    .request-list ol,
+    .lease-list { list-style: none; padding: 0; margin: 24px 0 0; }
+    .request-list li {
+      display: grid;
+      grid-template-columns: minmax(150px, .35fr) minmax(0, 1fr);
+      gap: 18px;
+      padding: 15px 0;
+      border-top: 1px solid var(--line);
+    }
+    .request-list li:last-child { border-bottom: 1px solid var(--line); }
+    .request-list li span { color: var(--muted); }
+    .deal-example {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-card);
+      background: var(--paper);
+      color: var(--ink);
+    }
+    .deal-example h3 {
+      margin: 0;
+      font-size: clamp(24px, 2.7vw, 34px);
+      line-height: 1.12;
+      letter-spacing: -.035em;
+    }
+    .deal-example-subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+    .deal-breakdown {
+      margin: 22px 0 0;
+      padding: 0;
+    }
+    .deal-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 16px;
+      align-items: baseline;
+      padding: 8px 0;
+      font-size: 17px;
+      line-height: 1.45;
+    }
+    .deal-row dt,
+    .deal-row dd { margin: 0; }
+    .deal-row dd {
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+      text-align: right;
+    }
+    .deal-row.total {
+      margin-top: 8px;
+      padding-top: 15px;
+      border-top: 1px solid var(--line);
+      font-weight: 850;
+      font-size: 18px;
+    }
+    .deal-takeaway {
+      margin: 20px 0 0;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      font-size: 17px;
+      line-height: 1.5;
+    }
+    .deal-note {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .lease-list li { padding: 8px 0 8px 22px; position: relative; }
+    .lease-list li::before { content: ""; position: absolute; left: 0; top: 18px; width: 8px; height: 2px; background: var(--lime-ink); }
+    .process-title {
+      margin: 34px 0 18px;
+      color: var(--lime);
+      font-size: clamp(25px, 2.7vw, 34px);
+      line-height: 1.15;
+      letter-spacing: -.035em;
+    }
+    .process-list { list-style: none; padding: 0; margin: 0; counter-reset: process; }
+    .process-list li {
+      counter-increment: process;
+      display: grid;
+      grid-template-columns: 32px minmax(135px, .4fr) minmax(0, 1fr);
+      gap: 16px;
+      padding: 18px 0;
+      border-top: 1px solid rgba(247, 248, 241, .2);
+      color: #c0c3b9;
+    }
+    .process-list li:last-child { border-bottom: 1px solid rgba(247, 248, 241, .2); }
+    .process-list li::before { content: counter(process); color: var(--lime); font-weight: 850; }
+    .process-name { color: #f7f8f1; font-weight: 800; }
+    .service-description { min-height: 96px; }
+    .service-price { margin-top: 0; padding-top: 34px; }
+    .service-caption { margin-top: 16px !important; font-weight: 700; }
+    .service-note {
+      margin-top: 22px !important;
+      padding-top: 18px;
+      border-top: 1px solid currentColor;
+      opacity: .78;
+      font-size: 15px !important;
+    }
+    .personal-cta h2 { font-size: clamp(40px, 5.3vw, 66px); }
+    .cta-copy {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: clamp(26px, 5vw, 60px);
+      margin-top: clamp(28px, 4vw, 44px);
+      padding-top: 28px;
+      border-top: 1px solid rgba(23, 23, 17, .45);
+    }
+    .cta-main,
+    .cta-secondary { margin: 0; line-height: 1.5; letter-spacing: -.015em; }
+    .cta-main { font-size: clamp(20px, 2vw, 24px); font-weight: 650; }
+    .cta-secondary { color: rgba(23, 23, 17, .76); font-size: clamp(17px, 1.7vw, 20px); }
+    .compact-social {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin-top: 6px;
+      padding: 0;
+      background: transparent;
+    }
+    .compact-social .social-link {
+      width: 100%;
+      height: 76px;
+      min-height: 76px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      padding: 8px 6px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: transparent;
+      color: var(--ink);
+      box-shadow: none;
+      transition: background-color .18s ease, border-color .18s ease;
+    }
+    .compact-social .social-link:hover {
+      transform: none;
+      filter: none;
+      background: color-mix(in srgb, var(--paper) 62%, transparent);
+      border-color: color-mix(in srgb, var(--line) 58%, var(--ink));
+      box-shadow: none;
+    }
+    .compact-social .social-link:focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 3px;
+    }
+    .compact-social .social-icon {
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+    .compact-social .social-icon svg { width: 24px; height: 24px; }
+    .compact-social .instagram-icon { color: #c13584; }
+    .compact-social .whatsapp-icon { color: #25d366; }
+    .compact-social .telegram-icon { color: #229ed9; }
+    .compact-social .social-name {
+      font-size: 13px;
+      line-height: 1.15;
+      font-weight: 650;
+      letter-spacing: 0;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+    .legal-note {
+      margin: 22px 0 0;
+      padding: 22px 0 28px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .legal-note p { margin: 0; max-width: 920px; }
+    .legal-note p + p { margin-top: 10px; }
+
+    @media (max-width: 820px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .service-description { min-height: 0; }
+      .cta-copy { grid-template-columns: 1fr; gap: 20px; }
+      .personal-cta .primary-action { width: 100%; }
+    }
+    @media (max-width: 520px) {
+      body { font-size: 17px; line-height: 1.5; }
+      .cover { min-height: 610px; align-content: end; gap: 36px; }
+      .cover-subtitle { font-size: 18px; line-height: 1.5; }
+      .card,
+      .phrase-card,
+      .service-card { padding: 22px 20px; }
+      .card p,
+      .phrase-translation { font-size: 17px; line-height: 1.5; }
+      .request-list li { grid-template-columns: 1fr; gap: 4px; }
+      .process-list li { grid-template-columns: 28px minmax(0, 1fr); gap: 10px 12px; }
+      .process-list li > :last-child { grid-column: 2; }
+      .ending-block { padding: 34px 20px; }
+      .about-avatar { width: 144px; height: 144px; }
+      .personal-cta .primary-action { justify-content: center; text-align: center; font-size: 16px; }
+      .compact-social { gap: 8px; margin-top: 12px; padding: 0; }
+    }
+
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition-duration: .001ms !important; }
@@ -741,10 +1015,10 @@
       <div class="cover-copy">
         <div class="cover-label">Бесплатный гайд</div>
         <h1 id="page-title">Как купить машину в&nbsp;США и&nbsp;не переплатить</h1>
-        <p class="cover-subtitle">Коротко и без воды: что спросить у дилера до визита, как не потерять деньги в finance office и какие фразы говорить по-английски.</p>
+        <p class="cover-subtitle">Коротко и без воды: что спросить у дилера до визита, как проверить финальный расчёт и какие фразы говорить по-английски.</p>
       </div>
       <div class="cover-meta">
-        <p class="cover-note">Читай за 20 минут - сохрани тысячи долларов.</p>
+        <p class="cover-note">Читай за 20 минут - подготовься к покупке.</p>
         <p class="author">Дмитрий · Майами</p>
       </div>
     </section>
@@ -754,145 +1028,136 @@
         <section class="section" id="idea">
           <p class="kicker">01 · Главная мысль</p>
           <h2>Платёж - это результат, а&nbsp;не&nbsp;цена</h2>
-          <p class="lead">Продавец почти всегда начинает с вопроса «На какой ежемесячный платёж вы рассчитываете?». Звучит как забота. На самом деле это единственный вопрос, ответ на который отдаёт ему управление всей сделкой.</p>
+          <p class="lead">Ежемесячный платёж важен для бюджета, но по нему одному нельзя оценить сделку. Сначала выясни полную цену автомобиля, затем сравни условия финансирования.</p>
           <div class="cards">
-            <article class="card dark"><p class="card-label">Главный вывод</p><h3>Платёж вычисляется из четырёх вещей</h3><p>Цена машины, первоначальный взнос, срок и ставка. Назвав платёж, ты зафиксировал результат и отдал все четыре множителя другой стороне.</p></article>
-            <article class="card lime"><p class="card-label">Правило</p><h3>Никогда не называй комфортный платёж первым</h3><p>Один и тот же платёж $650 на разных сроках покрывает машины, отличающиеся на восемь тысяч. Сначала цена «под ключ» - потом разговор о платеже.</p></article>
-            <article class="card warn"><p class="card-label">Ловушка</p><h3>«$499 в месяц» - три разные сделки</h3><p>Короткий срок с честной ставкой, растянутый срок с высокой ставкой и спрятанные допы в контракте. Платёж одинаковый - переплата отличается на тысячи.</p></article>
+            <article class="card dark"><p class="card-label signal-label">Главный вывод</p><h3>Цена и финансирование - два отдельных решения</h3><p>Сначала согласуй цену автомобиля, налоги, сборы и дополнительные продукты. Затем сравни APR, срок кредита и общую сумму выплат. Так видно и стоимость машины, и стоимость денег.</p></article>
+            <article class="card lime"><p class="card-label signal-label">Правило</p><h3>Не называй комфортный платёж первым</h3><p>Платёж зависит от суммы кредита, ставки и срока. На сумму кредита влияют цена автомобиля, налоги и сборы, первоначальный взнос, трейд-ин и включённые дополнительные продукты.</p></article>
+            <article class="card warn"><p class="card-label">Ловушка</p><h3>Одинаковый платёж - разные условия</h3><p>Срок можно растянуть, ставку изменить, а дополнительные продукты включить в сумму кредита. Поэтому сначала разбери полную цену, а уже потом оцени платёж.</p></article>
           </div>
         </section>
 
         <section class="section" id="mistakes">
           <p class="kicker">02 · Ошибки</p>
-          <h2>7 ошибок, на&nbsp;которых теряют деньги</h2>
-          <p class="lead">Почти все переплаты - не про «плохого дилера», а про эти семь ошибок. Проверь себя перед визитом.</p>
+          <h2>7 ошибок, которые усложняют сделку</h2>
+          <p class="lead">Большинство переплат появляется не в одной строке, а складывается из нескольких решений. Проверь их до визита.</p>
           <div class="cards">
-            <article class="card"><p class="card-label">Ошибка 1</p><h3>Едут в салон без цифр от нескольких дилеров</h3><p>Сравнивать нечего - соглашаешься на то, что дали.</p></article>
-            <article class="card"><p class="card-label">Ошибка 2</p><h3>Смотрят только на платёж</h3><p>Платёж можно сделать каким угодно. Сделка живёт в четырёх рычагах: цене, взносе, сроке и ставке.</p></article>
-            <article class="card"><p class="card-label">Ошибка 3</p><h3>Называют комфортный платёж первым</h3><p>Управление сделкой отдано в первые пять минут разговора.</p></article>
-            <article class="card"><p class="card-label">Ошибка 4</p><h3>Соглашаются на допы «всего +$30 в месяц»</h3><p>$30 × 72 месяца = $2 160 за то, что ты не заказывал.</p></article>
-            <article class="card"><p class="card-label">Ошибка 5</p><h3>Не различают MSRP, selling price и out-the-door</h3><p>Дилеры играют на путанице. Сравнивают между дилерами только цену «под ключ».</p></article>
-            <article class="card"><p class="card-label">Ошибка 6</p><h3>Показывают, что уже «купили» машину эмоционально</h3><p>Торг после этого - формальность, скидки не будет.</p></article>
-            <article class="card"><p class="card-label">Ошибка 7</p><h3>Отдают trade-in без оценки рынка</h3><p>Теряют на обеих сторонах сделки сразу.</p></article>
+            <article class="card"><p class="card-label">Ошибка 1</p><h3>Едут в салон без предложений от нескольких дилеров</h3><p>Без сопоставимых расчётов сложнее понять, насколько конкурентны цена и условия.</p></article>
+            <article class="card"><p class="card-label">Ошибка 2</p><h3>Смотрят только на платёж</h3><p>Напоминание: сначала сравни полную цену автомобиля, затем APR, срок и общую сумму выплат.</p></article>
+            <article class="card"><p class="card-label">Ошибка 3</p><h3>Называют комфортный платёж первым</h3><p>После этого продавцу проще подстроить срок и структуру сделки под названную сумму.</p></article>
+            <article class="card"><p class="card-label">Ошибка 4</p><h3>Соглашаются на допы «всего +$30 в месяц»</h3><p>$30 × 72 месяца = $2 160. Проси стоимость каждого продукта общей суммой.</p></article>
+            <article class="card"><p class="card-label">Ошибка 5</p><h3>Не различают MSRP, selling price и out-the-door</h3><p>У каждой цифры своя роль. Для сравнения нужны полная цена и отдельные условия финансирования.</p></article>
+            <article class="card"><p class="card-label">Ошибка 6</p><h3>Показывают, что уже решили купить именно эту машину</h3><p>Отстаивать свои условия станет сложнее.</p></article>
+            <article class="card"><p class="card-label">Ошибка 7</p><h3>Отдают trade-in без оценки рынка</h3><p>Оцени свою машину заранее, чтобы отдельно видеть результат по каждой части сделки.</p></article>
           </div>
         </section>
 
         <section class="section" id="numbers">
           <p class="kicker">03 · Цифры</p>
-          <h2>Возьми 5 цифр до&nbsp;визита - письменно</h2>
-          <p class="lead">Одна машина - четыре разные цифры, и дилеры играют на путанице. Проси всё по SMS или email: так цифры сложнее «переиграть» на встрече.</p>
+          <h2>Запроси 5 пунктов до&nbsp;визита</h2>
+          <p class="lead">Попроси расчёт письменно по SMS или email. Так проще сравнить предложения и проверить, что именно входит в итог.</p>
           <div class="cards">
-            <article class="card dark"><p class="card-label">Главный вывод</p><h3>Out-the-door - единственная цифра для сравнения</h3><p>Цена «под ключ» со всеми сборами и налогами. Её сравниваешь между дилерами - остальное шум.</p></article>
-            <article class="card"><p class="card-label">Чек-лист</p><h3>5 цифр - письменно, до&nbsp;визита</h3><p>1. Selling price - цена после торга, до налогов и сборов. 2. Out-the-door price - финал «под ключ». 3. Для кредита: APR, срок, down payment, сумма к финансированию. 4. Все dealer fees и add-ons списком - и можно ли их убрать. 5. VIN конкретной машины.</p></article>
-            <article class="card blue"><p class="card-label">Скажите так</p><h3>Let's agree on the out-the-door price first, and we can work out the payment after that.</h3><p>«Давайте сначала договоримся о цене «под ключ», а платёж посчитаем потом.»</p></article>
-            <article class="card warn"><p class="card-label">Красные флаги</p><h3>Насторожись, если дилер</h3><p>Называют только monthly payment и избегают структуры сделки. Говорят «приезжайте, на месте всё обсудим». Не называют add-ons заранее.</p></article>
+            <article class="card dark"><p class="card-label signal-label">Главный вывод</p><h3>Сравнивай полную цену и финансирование отдельно</h3><p>Сравнивай предложения на сопоставимые автомобили, рассчитанные для одного адреса регистрации и одинаковых условий. Отдельно сравни APR, срок кредита и общую сумму выплат.</p></article>
+            <article class="card request-list"><p class="card-label">Запрос</p><h3>5 пунктов - письменно, до&nbsp;визита</h3><ol><li><strong>Selling price</strong><span>Цена автомобиля после переговоров, до налогов и сборов.</span></li><li><strong>Out-the-door price</strong><span>Полная цена с налогами и обязательными сборами.</span></li><li><strong>Условия кредита</strong><span>APR, срок, первоначальный взнос и сумма к финансированию.</span></li><li><strong>Fees и add-ons</strong><span>Каждая позиция отдельно с указанием, обязательна ли она.</span></li><li><strong>VIN</strong><span>Номер конкретного автомобиля, к которому относится расчёт.</span></li></ol></article>
+            <article class="deal-example" aria-labelledby="deal-example-title">
+              <h3 id="deal-example-title">Цена машины - ещё не итог сделки</h3>
+              <p class="deal-example-subtitle">Условный учебный пример</p>
+              <dl class="deal-breakdown">
+                <div class="deal-row"><dt>Цена автомобиля</dt><dd>$30,000</dd></div>
+                <div class="deal-row"><dt>Сбор дилера</dt><dd>$995</dd></div>
+                <div class="deal-row"><dt>Дополнительный пакет</dt><dd>$1,495</dd></div>
+                <div class="deal-row"><dt>Налоги и регистрация</dt><dd>$2,510</dd></div>
+                <div class="deal-row total"><dt>Итого к оплате</dt><dd>$35,000</dd></div>
+              </dl>
+              <p class="deal-takeaway"><strong>Разница с ценой автомобиля - $5,000.</strong> Попроси объяснить каждую строку и отдельно показать расчёт без необязательных продуктов.</p>
+              <p class="deal-note">Суммы условные. Это не предложение дилера и не расчёт налогов. Фактические расходы зависят от сделки и места регистрации.</p>
+            </article>
+            <article class="phrase-card"><p class="card-label signal-label">Скажи так</p><p class="phrase-original" lang="en">Let's agree on the out-the-door price first, and we can work out the payment after that.</p><p class="phrase-translation">Давай сначала договоримся о цене «под ключ», а платёж посчитаем потом.</p><button class="copy-button" type="button">Копировать</button></article>
+            <article class="card warn"><p class="card-label">Обрати внимание</p><h3>Попроси структуру сделки заранее</h3><p>Если продавец называет только monthly payment, предлагает обсудить всё на месте или не раскрывает add-ons, запроси полный расчёт письменно.</p></article>
           </div>
         </section>
 
         <section class="section" id="three-talks">
           <p class="kicker">04 · Переговоры</p>
           <h2>Три отдельных разговора. В&nbsp;таком порядке</h2>
-          <p class="lead">Цена машины, трейд-ин, финансирование. В таком порядке и по отдельности. Смешали в одну цифру - ты перестал понимать, где выигрываешь, а где уже уступил.</p>
+          <p class="lead">Цена машины, трейд-ин, финансирование. Обсуждай их по отдельности, чтобы видеть условия каждой части сделки.</p>
           <div class="cards">
-            <article class="card lime"><p class="card-label">Правило</p><h3>Сначала цена «под ключ» - потом всё остальное</h3><p>Договорился о цене письменно - только потом trade-in. Потом финансирование. Каждый разговор отдельно.</p></article>
-            <article class="card blue"><p class="card-label">Скажите так</p><h3>Let's price the car first, with no trade. Once we have the out-the-door number, we'll talk about my car separately.</h3><p>«Давайте сначала оценим машину без трейд-ина. Когда будет цифра «под ключ», обсудим мою машину отдельно.»</p></article>
-            <article class="card warn"><p class="card-label">Ловушка</p><h3>Щедрый трейд-ин</h3><p>Дилер щедро уступает в цене новой машины, а за твою даёт на две тысячи меньше рынка. Ты доволен скидкой и не заметил, где её оплатил.</p></article>
+            <article class="card lime"><p class="card-label signal-label">Правило</p><h3>Сначала цена - потом трейд-ин и финансирование</h3><p>Согласуй цену автомобиля письменно. После этого отдельно обсуди trade-in, затем условия кредита или лизинга.</p></article>
+            <article class="phrase-card"><p class="card-label signal-label">Скажи так</p><p class="phrase-original" lang="en">Let's price the car first, with no trade. Once we have the out-the-door number, we'll talk about my car separately.</p><p class="phrase-translation">Давай сначала посчитаем машину без трейд-ина. Когда будет цена «под ключ», обсудим мою машину отдельно.</p><button class="copy-button" type="button">Копировать</button></article>
+            <article class="card warn"><p class="card-label">Ловушка</p><h3>Щедрая оценка трейд-ина</h3><p>Выгода по одной части сделки может компенсироваться менее выгодными условиями по другой. Сравни каждую часть отдельно.</p></article>
           </div>
         </section>
 
         <section class="section" id="leasing">
           <p class="kicker">05 · Лизинг</p>
           <h2>Лизинг за&nbsp;две минуты</h2>
-          <p class="lead">В кредите взнос уменьшает твой долг за вещь, которая станет твоей. В лизинге машина твоей не станет никогда - взнос просто предоплачивает чужую амортизацию.</p>
+          <p class="lead">Лизинг даёт право пользоваться машиной на условиях договора. По окончании её возвращают или выкупают, если договор предусматривает такую возможность.</p>
           <div class="cards">
-            <article class="card dark"><p class="card-label">Главный вывод</p><h3>В лизинге первоначальный взнос не нужен</h3><p>При тотале в первые месяцы эти деньги сгорают - машину-то ты арендовал. $0 down - нормальная структура лизинга.</p></article>
-            <article class="card lime"><p class="card-label">Правило</p><h3>Спроси три цифры</h3><p>Cap cost (капитализированная стоимость), money factor (ставка) и residual (остаточная стоимость). Кто называет только платёж - прячет маржу.</p></article>
-            <article class="card blue"><p class="card-label">Скажите так</p><h3>Let's structure it with zero down. I want to see the cap cost, the money factor, and the residual.</h3><p>«Давайте структурируем с нулевым взносом. Хочу видеть cap cost, money factor и residual.»</p></article>
+            <article class="card dark"><p class="card-label signal-label">Главный вывод</p><h3>Сравни лизинг со взносом и без</h3><p>Сравни условия с первоначальным взносом и без него. $0 down не обязательно означает отсутствие платежей при подписании: попроси показать всю стартовую сумму с разбивкой.</p></article>
+            <article class="card lime"><p class="card-label signal-label">Правило</p><h3>Проверь основные параметры лизинга</h3><ul class="lease-list"><li>Cap cost - капитализированная стоимость.</li><li>Money factor - коэффициент, влияющий на стоимость финансирования.</li><li>Residual - остаточная стоимость.</li><li>Срок договора.</li><li>Лимит пробега.</li><li>Общая сумма при подписании.</li></ul><p>По одному платежу нельзя оценить условия лизинга.</p></article>
+            <article class="phrase-card"><p class="card-label signal-label">Скажи так</p><p class="phrase-original" lang="en">Let's structure it with zero down. I want to see the cap cost, the money factor, the residual, the term, the mileage allowance, and the total due at signing.</p><p class="phrase-translation">Давай посчитаем вариант без первоначального уменьшения стоимости. Я хочу видеть cap cost, money factor, residual, срок, лимит пробега и всю сумму при подписании.</p><button class="copy-button" type="button">Копировать</button></article>
           </div>
         </section>
 
         <section class="section" id="finance-office">
           <p class="kicker">06 · Finance office</p>
-          <h2>Где в&nbsp;сделку прячут тысячи</h2>
-          <p class="lead">Ты думаешь, что договорился по цене. Но самый дорогой кабинет - у финансиста. Именно там в сделку зашивают тысячи - и подают их как «всего плюс немного в месяц».</p>
+          <h2>Проверь финальный расчёт до&nbsp;подписи</h2>
+          <p class="lead">В кабинете финансиста к сделке могут добавить продукты и изменить структуру платежей. Сверь финальный расчёт с тем, что согласовал раньше.</p>
           <div class="cards">
-            <article class="card warn"><p class="card-label">Приём 1</p><h3>«Это всего $42 в месяц»</h3><p>$42 × 72 месяца = $3 024 за доп, который ты не заказывал. Проси цену допа общей суммой, а не в месяц.</p></article>
-            <article class="card warn"><p class="card-label">Приём 2</p><h3>Меню с тремя колонками</h3><p>Тебе показывают «базовый / рекомендованный / максимальный» пакеты. Бери базовую колонку - без продуктов.</p></article>
-            <article class="card warn"><p class="card-label">Приём 3</p><h3>Цифры изменились по дороге</h3><p>Цена была одна, а в кабинете финансиста стала другая. Не подписывай изменившиеся условия - уходи и возвращайся.</p></article>
-            <article class="card blue"><p class="card-label">Скажите так</p><h3>I'll take the base column - no add-ons. / What is this line item? I didn't agree to it - please remove it.</h3><p>«Возьму базовую колонку - без допов. Покажите платёж без этих продуктов.» / «Что это за строка? Я на это не соглашался - уберите и распечатайте новый контракт.»</p></article>
+            <article class="card warn"><p class="card-label">Приём 1</p><h3>«Это всего $42 в месяц»</h3><p>$42 × 72 месяца = $3 024. Проси цену дополнительного продукта общей суммой, а не только в месяц.</p></article>
+            <article class="card warn"><p class="card-label">Приём 2</p><h3>Меню с несколькими пакетами</h3><p>Попроси отдельный расчёт без необязательных дополнительных продуктов.</p></article>
+            <article class="card warn"><p class="card-label">Приём 3</p><h3>Цифры изменились перед подписанием</h3><p>Если цена или условия отличаются от согласованных, остановись и попроси новый расчёт до подписания.</p></article>
+            <article class="phrase-card"><p class="card-label signal-label">Скажи так</p><p class="phrase-original" lang="en">Please show me the payment without optional add-ons. What is this line item? I didn't agree to it - please remove it and print a new contract.</p><p class="phrase-translation">Покажи платёж без необязательных дополнительных продуктов. Что это за строка? Я на неё не соглашался - убери её и распечатай новый договор.</p><button class="copy-button" type="button">Копировать</button></article>
           </div>
         </section>
 
         <section class="section" id="trade-in">
           <p class="kicker">07 · Trade-in</p>
-          <h2>Трейд-ин - вторая сделка внутри сделки</h2>
-          <p class="lead">Оценка твоей старой машины - идеальное место, чтобы вернуть уступленное в цене новой. Держи эти два разговора отдельно.</p>
+          <h2>Трейд-ин - отдельная часть сделки</h2>
+          <p class="lead">Оценку твоей машины обсуждай отдельно от цены новой. Так проще понять реальную стоимость обмена.</p>
           <div class="cards">
-            <article class="card lime"><p class="card-label">Правило</p><h3>Оцени машину заранее в трёх местах</h3><p>Онлайн-оценщики, выкупные сервисы, дилеры. Получишь не число, а диапазон - это гораздо полезнее.</p></article>
-            <article class="card dark"><p class="card-label">Главный вывод</p><h3>Не обсуждай trade-in до цены новой</h3><p>Сначала полностью согласуй out-the-door на новую машину. На вопрос в начале отвечай: «Возможно, буду сдавать. Обсудим после цены».</p></article>
-            <article class="card blue"><p class="card-label">Скажите так</p><h3>I might have a trade. Let's talk about it once we've agreed on the price of the car.</h3><p>«Возможно, у меня будет трейд-ин. Давайте обсудим это, когда договоримся о цене машины.»</p></article>
+            <article class="card lime"><p class="card-label signal-label">Правило</p><h3>Оцени машину заранее в трёх местах</h3><p>Сравни онлайн-оценки, предложения сервисов выкупа и дилеров. Диапазон даст ориентир для переговоров.</p></article>
+            <article class="card dark"><p class="card-label signal-label">Главный вывод</p><h3>Не обсуждай trade-in до цены новой машины</h3><p>Сначала согласуй цену автомобиля. Затем отдельно сравни оценку своей машины.</p></article>
+            <article class="phrase-card"><p class="card-label signal-label">Скажи так</p><p class="phrase-original" lang="en">I might have a trade. Let's talk about it once we've agreed on the price of the car.</p><p class="phrase-translation">Возможно, у меня будет трейд-ин. Давай обсудим его, когда договоримся о цене машины.</p><button class="copy-button" type="button">Копировать</button></article>
           </div>
         </section>
 
         <section class="section" id="insurance">
           <p class="kicker">08 · Страховка</p>
-          <h2>Закажи страховку за&nbsp;неделю до&nbsp;сделки</h2>
-          <p class="lead">Оставить страховку на день сделки - значит оформить её за 10 минут, из одной-двух компаний дилера, с покрытием по минимуму и ценой, которую ты ни с чем не сравнил.</p>
-          <div class="cards">
-            <article class="card lime"><p class="card-label">Правило</p><h3>Котировки заранее, подтверждение - до визита</h3><p>Сравни 3-4 компании заранее. В день сделки у тебя уже должно быть подтверждение покрытия.</p></article>
-            <article class="card"><p class="card-label">Флорида</p><h3>PIP и требования кредитора</h3><p>Во Флориде обязательно личное страхование PIP, а кредитор потребует полное покрытие. Проверь лимиты до подписания, а не после.</p></article>
-          </div>
+          <h2>Узнай стоимость страховки до&nbsp;покупки</h2>
+          <p class="lead">Запроси предложения нескольких страховщиков по VIN выбранной машины. Сравни одинаковые покрытия, лимиты и франшизы. Согласуй дату начала покрытия до получения автомобиля. При кредите или лизинге уточни требования банка или лизинговой компании.</p>
         </section>
 
         <section class="section" id="checklist">
           <p class="kicker">09 · Чек-лист</p>
           <h2>Финальный чек-лист перед подписью</h2>
-          <p class="lead">Не подписывай ничего, пока не можешь поставить галочку напротив каждого пункта.</p>
+          <p class="lead">Перед подписанием убедись, что можешь отметить каждый пункт.</p>
           <div class="checklist" aria-label="Чек-лист перед покупкой">
             <button class="check-item" type="button" aria-pressed="false"><span class="check-box" aria-hidden="true"></span><span class="check-text">Понимаю selling price машины и отличаю его от MSRP</span></button>
-            <button class="check-item" type="button" aria-pressed="false"><span class="check-box" aria-hidden="true"></span><span class="check-text">Видел все fees, налоги и add-ons отдельно от цены</span></button>
-            <button class="check-item" type="button" aria-pressed="false"><span class="check-box" aria-hidden="true"></span><span class="check-text">Знаю точный платёж, срок, down payment и total cost</span></button>
-            <button class="check-item" type="button" aria-pressed="false"><span class="check-box" aria-hidden="true"></span><span class="check-text">Для кредита: знаю APR, сумму к финансированию и итоговую переплату</span></button>
-            <button class="check-item" type="button" aria-pressed="false"><span class="check-box" aria-hidden="true"></span><span class="check-text">Знаю оценку своего trade-in и сравнил минимум в 2 местах</span></button>
-            <button class="check-item" type="button" aria-pressed="false"><span class="check-box" aria-hidden="true"></span><span class="check-text">Не подписываю под эмоцией, усталостью или давлением «только сегодня»</span></button>
+            <button class="check-item" type="button" aria-pressed="false"><span class="check-box" aria-hidden="true"></span><span class="check-text">Вижу все fees, налоги и add-ons отдельно от цены</span></button>
+            <button class="check-item" type="button" aria-pressed="false"><span class="check-box" aria-hidden="true"></span><span class="check-text">Знаю платёж, срок, первоначальный взнос и общую сумму выплат</span></button>
+            <button class="check-item" type="button" aria-pressed="false"><span class="check-box" aria-hidden="true"></span><span class="check-text">Для кредита: знаю APR и сумму к финансированию</span></button>
+            <button class="check-item" type="button" aria-pressed="false"><span class="check-box" aria-hidden="true"></span><span class="check-text">Знаю оценку своего trade-in и сравнил минимум два предложения</span></button>
+            <button class="check-item" type="button" aria-pressed="false"><span class="check-box" aria-hidden="true"></span><span class="check-text">Проверил финальные цифры и беру паузу, если они изменились</span></button>
           </div>
           <p class="check-status" aria-live="polite">Отмечено: <span id="checkedCount">0</span> из 6</p>
-          <article class="card warn"><p class="card-label">Стоп-сигнал</p><h3>Когда взять паузу и НЕ покупать сегодня</h3><p>Не дают прозрачный breakdown. Цифры внезапно меняются в finance office. Ты устал или злишься. Лучше потерять одну «выгодную» машину, чем подписать плохую сделку на годы вперёд.</p></article>
+          <article class="card warn"><p class="card-label">Стоп-сигнал</p><h3>Когда стоит взять паузу</h3><p>Расчёт непрозрачен, цифры изменились перед подписанием или тебе не дают спокойно прочитать документы. Попроси время и вернись к решению после проверки условий.</p></article>
         </section>
       </div>
     </div>
 
     <section class="ending" id="final" aria-label="Что дальше">
-      <article class="ending-block recap-block" aria-labelledby="recap-title">
-        <p class="kicker">Финал · Что ты забрал</p>
-        <h2 id="recap-title">Что у&nbsp;тебя теперь в&nbsp;руках</h2>
-        <p class="ending-lead">Коротко, что у тебя в руках после этого гайда:</p>
-        <ol class="recap-list">
-          <li>Платёж - результат четырёх вещей. Сначала цена «под ключ» - потом разговор о платеже.</li>
-          <li>5 цифр письменно до визита. Нет цифр - нет визита.</li>
-          <li>Три разговора отдельно: цена, трейд-ин, финансирование.</li>
-          <li>В лизинге - $0 down. И три цифры: cap cost, money factor, residual.</li>
-          <li>В finance office - базовая колонка, без допов.</li>
-          <li>Страховку закажи за неделю до сделки.</li>
-        </ol>
-      </article>
-
       <article class="ending-block about-block" aria-labelledby="about-title">
         <img class="about-avatar" src="data:image/jpeg;base64,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" alt="Дмитрий на жёлтом фоне" width="206" height="206" />
         <div>
           <h2 id="about-title">Привет! Я&nbsp;Дмитрий</h2>
-          <p class="about-intro">Живу в Америке двенадцать лет, в Майами - три года. Помогаю русскоязычным купить машину в США без стресса.</p>
-          <p class="pain-echo"><span>Прочитал гайд - теперь видишь все ловушки.</span><span>И от этого только страшнее идти одному: цену в договоре могут подменить, а подписанное уже не отыграешь.</span></p>
-          <h3 class="fears-title">Мы закрываем каждый страх:</h3>
-          <ul class="fear-list">
-            <li class="fear-item"><span class="fear-label">Боишься, что в договоре окажется другая цена</span><span class="fear-close">фиксируем цену «под ключ» письменно и убираем из договора лишние доплаты</span></li>
-            <li class="fear-item"><span class="fear-label">Боишься допов, которые уже установлены</span><span class="fear-close">проверяем каждую строку договора до подписания</span></li>
-            <li class="fear-item"><span class="fear-label">Боишься, что накрутят ставку</span><span class="fear-close">проверяем ставку независимо от дилера</span></li>
-            <li class="fear-item"><span class="fear-label">Боишься неподъёмного платежа</span><span class="fear-close">считаем платёж под твою ситуацию. Если его можно уменьшить - знаем как</span></li>
-            <li class="fear-item"><span class="fear-label">Боишься отдать свою машину за бесценок</span><span class="fear-close">оцениваем твою машину заранее</span></li>
-            <li class="fear-item"><span class="fear-label">Боишься выбрать не ту машину</span><span class="fear-close">помогаем выбрать под запрос и бюджет</span></li>
-            <li class="fear-item"><span class="fear-label">Боишься потерять весь день в салоне</span><span class="fear-close">ведём онлайн, приезжаешь только подписать и забрать</span></li>
-          </ul>
+          <p class="about-intro">Живу в США двенадцать лет, последние три года - в Майами. Вместе с партнёрами помогаю русскоязычным покупателям с подбором и покупкой автомобилей в США.</p>
+          <h3 class="process-title">Как мы помогаем с покупкой</h3>
+          <ol class="process-list">
+            <li><span class="process-name">Подбор</span><span>Ищем варианты под твой запрос и бюджет.</span></li>
+            <li><span class="process-name">Переговоры</span><span>Обсуждаем с продавцом цену и условия покупки.</span></li>
+            <li><span class="process-name">Проверка условий</span><span>Разбираем расчёт сделки, сборы и дополнительные продукты до подписания.</span></li>
+            <li><span class="process-name">Сопровождение</span><span>Координируем этапы покупки и получения автомобиля.</span></li>
+          </ol>
         </div>
       </article>
 
@@ -902,51 +1167,51 @@
         <div class="services-grid">
           <section class="service-card primary" aria-labelledby="turnkey-title">
             <h3 id="turnkey-title">Покупка под ключ</h3>
-            <p>Помогаем купить автомобиль от А до Я: подбор под запрос и бюджет, торг с дилером, проверка договора, кредит или лизинг. Машина может быть новой или <span style="white-space: nowrap">б/у</span>.</p>
-            <div class="service-price">Для вас - $0.<br>Нам платит продавец.</div>
+            <p class="service-description">Подбор автомобиля под запрос и бюджет, переговоры с продавцом и сопровождение покупки</p>
+            <div class="service-price">$0</div>
+            <p class="service-caption">За нашу услугу. Вознаграждение нам выплачивает продавец</p>
+            <p class="service-note">Стоимость автомобиля, налоги, регистрация и другие расходы по сделке оплачиваются отдельно</p>
           </section>
           <section class="service-card" aria-labelledby="auction-title">
             <h3 id="auction-title">Подбор с&nbsp;аукциона</h3>
-            <p>Отдельная услуга: находим и выкупаем автомобиль с аукциона под ваш запрос.</p>
+            <p class="service-description">Отдельная услуга по подбору и покупке автомобиля с аукциона под твой запрос</p>
             <div class="service-price">$1,000</div>
+            <p class="service-caption">Стоимость услуги</p>
           </section>
-        </div>
-      </article>
-
-      <article class="ending-block social-block" aria-labelledby="social-title">
-        <p class="kicker">Где меня найти</p>
-        <h2 id="social-title">Нужна помощь - пиши</h2>
-        <p class="ending-lead">Выбираешь машину или уже торгуешься с дилером - пиши, разберём твою ситуацию.</p>
-        <div class="social-links">
-          <a class="social-link whatsapp" href="https://wa.me/19544772740" target="_blank" rel="noopener noreferrer" aria-label="Написать Дмитрию в WhatsApp">
-            <span class="social-icon" aria-hidden="true">
-              <svg viewBox="0 0 32 32" fill="none"><path d="M27.2 15.6a11.2 11.2 0 0 1-16.6 9.8L5 27l1.5-5.4a11.2 11.2 0 1 1 20.7-6Z" stroke="currentColor" stroke-width="2.35" stroke-linejoin="round"/><path d="M11.1 9.8c.3-.7.7-.7 1.2-.7h.5c.2 0 .5.1.6.5l1.2 2.9c.1.4.1.7-.1 1l-.9 1.1c-.3.3-.2.6 0 .9 1.1 1.9 2.7 3.4 4.7 4.3.4.2.7.2.9-.1l1.3-1.6c.3-.4.6-.3 1-.2l2.7 1.3c.4.2.6.3.7.6.1.3-.2 1.7-.8 2.4-.7.8-1.8 1.2-2.9 1.2-1.2 0-3.6-.6-6.2-2.9-3.1-2.7-4.8-6.1-4.9-8-.1-.9.3-2 .9-2.7Z" fill="currentColor"/></svg>
-            </span>
-            <span class="social-copy"><span class="social-name">WhatsApp</span><span class="social-note">быстрее всего</span></span>
-          </a>
-          <a class="social-link telegram" href="https://t.me/dmtriy_miami" target="_blank" rel="noopener noreferrer" aria-label="Написать Дмитрию в Telegram">
-            <span class="social-icon" aria-hidden="true">
-              <svg viewBox="0 0 32 32" fill="none"><path d="m27.2 6.2-4 19c-.3 1.3-1.1 1.6-2.2 1l-6.1-4.5-3 2.9c-.3.3-.6.6-1.2.6l.4-6.2 11.3-10.2c.5-.4-.1-.7-.8-.3L7.7 17.3l-6-1.9c-1.3-.4-1.3-1.3.3-1.9l23.5-9c1.1-.4 2 .3 1.7 1.7Z" fill="currentColor"/></svg>
-            </span>
-            <span class="social-copy"><span class="social-name">Telegram</span><span class="social-note">@dmtriy_miami</span></span>
-          </a>
-          <a class="social-link instagram" href="https://www.instagram.com/dmitry_miami/" target="_blank" rel="noopener noreferrer" aria-label="Открыть Instagram Дмитрия">
-            <span class="social-icon" aria-hidden="true">
-              <svg viewBox="0 0 32 32" fill="none"><rect x="4.5" y="4.5" width="23" height="23" rx="7" stroke="currentColor" stroke-width="2.5"/><circle cx="16" cy="16" r="5.25" stroke="currentColor" stroke-width="2.5"/><circle cx="23.3" cy="8.9" r="1.55" fill="currentColor"/></svg>
-            </span>
-            <span class="social-copy"><span class="social-name">Instagram</span><span class="social-note">@dmitry_miami</span></span>
-          </a>
         </div>
       </article>
 
       <article class="ending-block personal-cta" aria-labelledby="personal-title">
         <h2 id="personal-title">Планируешь купить машину в США?</h2>
-        <div class="cta-scenarios">
-          <p class="cta-scenario">Напиши, какую машину рассматриваешь и на какой бюджет рассчитываешь. Обсудим твой запрос и подскажем, как можем помочь с подбором и покупкой.</p>
-          <p class="cta-scenario">Уже получил предложение дилера? Пришли его - разберём цену, сборы и дополнительные платежи до подписания.</p>
+        <div class="cta-copy">
+          <p class="cta-main">Напиши, какую машину рассматриваешь, свой бюджет и штат. Обсудим твой запрос и подскажем, как можем помочь с подбором и покупкой.</p>
+          <p class="cta-secondary">Уже получил предложение дилера? Пришли его - разберём цену, сборы и дополнительные платежи до подписания.</p>
         </div>
-        <a class="primary-action" href="https://wa.me/19544772740" target="_blank" rel="noopener noreferrer"><span>Обсудить покупку в WhatsApp</span><span aria-hidden="true">↗</span></a>
+        <a class="primary-action" href="https://wa.me/19544772740?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9%21%20%D0%9F%D1%80%D0%BE%D1%87%D0%B8%D1%82%D0%B0%D0%BB%20%D0%B2%D0%B0%D1%88%20%D0%B3%D0%B0%D0%B9%D0%B4%2C%20%D0%B5%D1%81%D1%82%D1%8C%20%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%20%D0%BF%D0%BE%20%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%BE%D0%B1%D0%B8%D0%BB%D1%8E." target="_blank" rel="noopener noreferrer">
+          <svg class="cta-whatsapp-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="M27.2 15.6a11.2 11.2 0 0 1-16.6 9.8L5 27l1.5-5.4a11.2 11.2 0 1 1 20.7-6Z" stroke="currentColor" stroke-width="2.35" stroke-linejoin="round"/><path d="M11.1 9.8c.3-.7.7-.7 1.2-.7h.5c.2 0 .5.1.6.5l1.2 2.9c.1.4.1.7-.1 1l-.9 1.1c-.3.3-.2.6 0 .9 1.1 1.9 2.7 3.4 4.7 4.3.4.2.7.2.9-.1l1.3-1.6c.3-.4.6-.3 1-.2l2.7 1.3c.4.2.6.3.7.6.1.3-.2 1.7-.8 2.4-.7.8-1.8 1.2-2.9 1.2-1.2 0-3.6-.6-6.2-2.9-3.1-2.7-4.8-6.1-4.9-8-.1-.9.3-2 .9-2.7Z" fill="currentColor"/></svg>
+          <span>Написать в WhatsApp</span>
+        </a>
       </article>
+
+      <nav class="social-block compact-social" aria-label="Социальные сети Дмитрия">
+        <a class="social-link" href="https://www.instagram.com/dmitry_miami/" target="_blank" rel="noopener noreferrer" aria-label="Открыть Instagram Дмитрия">
+          <span class="social-icon instagram-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><defs><linearGradient id="instagramGradient" x1="5" y1="28" x2="27" y2="4" gradientUnits="userSpaceOnUse"><stop stop-color="#feda75"/><stop offset=".28" stop-color="#fa7e1e"/><stop offset=".52" stop-color="#d62976"/><stop offset=".76" stop-color="#962fbf"/><stop offset="1" stop-color="#4f5bd5"/></linearGradient></defs><rect x="4.5" y="4.5" width="23" height="23" rx="7" stroke="url(#instagramGradient)" stroke-width="2.5"/><circle cx="16" cy="16" r="5.25" stroke="url(#instagramGradient)" stroke-width="2.5"/><circle cx="23.3" cy="8.9" r="1.55" fill="url(#instagramGradient)"/></svg></span>
+          <span class="social-name">Instagram</span>
+        </a>
+        <a class="social-link" href="https://wa.me/19544772740" target="_blank" rel="noopener noreferrer" aria-label="Написать Дмитрию в WhatsApp">
+          <span class="social-icon whatsapp-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="M27.2 15.6a11.2 11.2 0 0 1-16.6 9.8L5 27l1.5-5.4a11.2 11.2 0 1 1 20.7-6Z" stroke="currentColor" stroke-width="2.35" stroke-linejoin="round"/><path d="M11.1 9.8c.3-.7.7-.7 1.2-.7h.5c.2 0 .5.1.6.5l1.2 2.9c.1.4.1.7-.1 1l-.9 1.1c-.3.3-.2.6 0 .9 1.1 1.9 2.7 3.4 4.7 4.3.4.2.7.2.9-.1l1.3-1.6c.3-.4.6-.3 1-.2l2.7 1.3c.4.2.6.3.7.6.1.3-.2 1.7-.8 2.4-.7.8-1.8 1.2-2.9 1.2-1.2 0-3.6-.6-6.2-2.9-3.1-2.7-4.8-6.1-4.9-8-.1-.9.3-2 .9-2.7Z" fill="currentColor"/></svg></span>
+          <span class="social-name">WhatsApp</span>
+        </a>
+        <a class="social-link" href="https://t.me/dmtriy_miami" target="_blank" rel="noopener noreferrer" aria-label="Написать Дмитрию в Telegram">
+          <span class="social-icon telegram-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="m27.2 6.2-4 19c-.3 1.3-1.1 1.6-2.2 1l-6.1-4.5-3 2.9c-.3.3-.6.6-1.2.6l.4-6.2 11.3-10.2c.5-.4-.1-.7-.8-.3L7.7 17.3l-6-1.9c-1.3-.4-1.3-1.3.3-1.9l23.5-9c1.1-.4 2 .3 1.7 1.7Z" fill="currentColor"/></svg></span>
+          <span class="social-name">Telegram</span>
+        </a>
+      </nav>
+
+      <footer class="legal-note">
+        <p>© 2026 Дмитрий Майами. Перепубликация без разрешения запрещена, кроме случаев, предусмотренных законом.</p>
+        <p>Гайд носит информационный характер и не заменяет индивидуальную консультацию. Перед подписанием проверяй документы и актуальные условия сделки.</p>
+      </footer>
     </section>
   </main>
 
@@ -965,11 +1230,63 @@
 
       var checks = Array.prototype.slice.call(document.querySelectorAll('.check-item'));
       var count = document.getElementById('checkedCount');
+
+      function readChecklistState() {
+        var match = window.location.hash.match(/(?:^#|&)check=([01]{6})(?:&|$)/);
+        return match ? match[1] : '000000';
+      }
+
+      function renderChecklist(state) {
+        checks.forEach(function (button, index) {
+          button.setAttribute('aria-pressed', state.charAt(index) === '1' ? 'true' : 'false');
+        });
+        count.textContent = String(state.split('').filter(function (value) { return value === '1'; }).length);
+      }
+
+      function writeChecklistState() {
+        var state = checks.map(function (button) { return button.getAttribute('aria-pressed') === 'true' ? '1' : '0'; }).join('');
+        var nextHash = '#check=' + state;
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState(null, '', nextHash);
+        } else {
+          window.location.hash = nextHash;
+        }
+        renderChecklist(state);
+      }
+
+      renderChecklist(readChecklistState());
       checks.forEach(function (button) {
         button.addEventListener('click', function () {
-          var next = button.getAttribute('aria-pressed') !== 'true';
-          button.setAttribute('aria-pressed', String(next));
-          count.textContent = String(checks.filter(function (item) { return item.getAttribute('aria-pressed') === 'true'; }).length);
+          button.setAttribute('aria-pressed', button.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+          writeChecklistState();
+        });
+      });
+
+      Array.prototype.slice.call(document.querySelectorAll('.copy-button')).forEach(function (button) {
+        button.addEventListener('click', function () {
+          var card = button.closest('.phrase-card');
+          var text = card.querySelector('.phrase-original').textContent.trim();
+          var finish = function () {
+            button.textContent = 'Скопировано';
+            button.classList.add('copied');
+            window.setTimeout(function () {
+              button.textContent = 'Копировать';
+              button.classList.remove('copied');
+            }, 1800);
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(finish, function () {});
+          } else {
+            var area = document.createElement('textarea');
+            area.value = text;
+            area.setAttribute('readonly', '');
+            area.style.position = 'fixed';
+            area.style.opacity = '0';
+            document.body.appendChild(area);
+            area.select();
+            try { if (document.execCommand('copy')) { finish(); } } catch (error) {}
+            document.body.removeChild(area);
+          }
         });
       });
     }());
