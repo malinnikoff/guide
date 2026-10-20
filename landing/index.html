@@ -3,172 +3,327 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Не подписывай договор, пока не разберёшь все цифры</title>
+<title>Купить новый автомобиль в США без переплат - Дмитрий Малинников</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#0e0e10;color:#f2f2f2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
-.wrap{max-width:640px;margin:0 auto;padding:0 20px}
-section{padding:40px 0;border-bottom:1px solid #222}
-h2{font-size:26px;line-height:1.2;margin-bottom:20px}
-h2 .gold{color:#E8B64C}
-p.sub{font-size:17px;color:#c9c9c9;margin-bottom:26px}
-.btn{display:block;background:#E8B64C;color:#161618;font-weight:700;text-align:center;border-radius:12px;text-decoration:none;border:none;cursor:pointer}
-.btn:active{transform:scale(.98)}
-.btn-hero{width:fit-content;max-width:300px;margin:0 auto;padding:15px 30px;font-size:16px}
-.micro{font-size:13px;color:#8a8a8a;text-align:center;margin-top:14px}
-.card{background:#17171a;border:1px solid #2A2A2E;border-radius:14px;padding:20px;margin-bottom:14px}
-.card h3{font-size:17px;margin-bottom:8px}
-.card p{font-size:16px;line-height:1.55;color:#C8C8CC}
-.check{list-style:none}
-.check li{font-size:16px;line-height:1.55;color:#C8C8CC;padding:10px 0 10px 34px;position:relative;border-bottom:1px solid #1e1e22}
-.check li:last-child{border:none}
-.check li:before{content:"✓";color:#E8B64C;font-weight:700;font-size:18px;position:absolute;left:6px;top:10px}
-.team{background:#17171a;border-radius:14px;padding:20px}
-.team-top{display:flex;gap:18px;align-items:center;margin-bottom:14px}
-.team-photo{width:140px;height:140px;border-radius:50%;object-fit:cover;border:2px solid #E8B64C;flex-shrink:0}
-.team p{font-size:16px;line-height:1.55;color:#C8C8CC;margin-bottom:10px}
-.team p strong{color:#f2f2f2}
-.team-name{font-size:20px;font-weight:800;color:#f2f2f2 !important;margin-bottom:4px !important}
-@media(max-width:768px){.team-top{flex-direction:column;text-align:center}}
-.price{background:#17171a;border:1px solid #E8B64C;border-radius:14px;padding:20px}
-.price p{font-size:16px;margin-bottom:8px}
-label{display:block;font-size:14px;color:#C8C8CC;margin:12px 0 6px}
-input,select,textarea{width:100%;background:#17171a;border:1px solid #333;color:#f2f2f2;font-size:16px;padding:14px;border-radius:10px;font-family:inherit}
-input:focus,select:focus,textarea:focus{outline:none;border-color:#E8B64C}
-.btn-submit{display:block;max-width:320px;margin:20px auto 0;padding:15px 30px;font-size:16px}
-.disclaimer{font-size:13px;color:#8a8a8a;margin-top:16px}
-footer{padding:28px 0 40px;text-align:center;font-size:13px;color:#8a8a8a}
-footer a{color:#E8B64C;text-decoration:none}
-.hero{padding:56px 0 36px}
-.hero h1{font-size:34px;line-height:1.2;letter-spacing:-0.5px;font-weight:800;margin-bottom:18px;color:#f2f2f2}
-.hero .hook{font-size:20px;font-weight:600;color:#E8B64C;line-height:1.4;margin-bottom:18px}
-.hero .hero-sub{font-size:16px;color:#c9c9c9;margin-bottom:30px}
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #F7F8F1; color: #14150F; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; font-size: 17px; line-height: 1.5; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 14px 14px 110px; }
+  .hero { background: #10120E; color: #F5F2E8; border-radius: 24px; padding: 26px 22px 28px; }
+  .kicker-line { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
+  .kicker-line img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .kicker-line span { color: #E8B64C; font-size: 12.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; line-height: 1.35; }
+  h1 { font-size: 33px; line-height: 1.14; margin: 0 0 14px; font-weight: 800; }
+  .hero-sub { color: #C9C7BC; font-size: 17px; line-height: 1.55; margin: 0 0 22px; }
+  .btn { display: block; text-align: center; padding: 16px 18px; border-radius: 14px; font-weight: 700; font-size: 17px; text-decoration: none; border: none; cursor: pointer; width: 100%; }
+  .btn.gold { background: #E8B64C; color: #14150F; }
+  .btn.ghost { background: transparent; border: 1px solid #6B6A5E; color: #F5F2E8; margin-top: 10px; }
+  section { margin-top: 36px; }
+  .kick { color: #D95D1E; font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin: 0 0 6px; }
+  h2 { font-size: 26px; line-height: 1.2; margin: 0 0 16px; font-weight: 800; }
+  .card { background: #FFFFFF; border: 1px solid #D4D2C8; border-radius: 18px; padding: 18px; margin-bottom: 12px; }
+  .trap .prob { font-weight: 700; margin: 0 0 8px; }
+  .trap .sol { margin: 0; color: #3A3B33; }
+  .trap .sol b { color: #14150F; }
+  .check { color: #B98A1F; font-weight: 800; }
+  .step { display: flex; gap: 14px; align-items: flex-start; }
+  .step .num { flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%; background: #E8B64C; color: #14150F; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 16px; margin-top: 2px; }
+  .step p { margin: 0; }
+  .team { text-align: left; }
+  .team img { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 3px solid #E8B64C; display: block; margin: 0 0 16px; }
+  .team p { margin: 0 0 16px; }
+  .contract-card { background: #F6DFA6; border-radius: 18px; padding: 20px; }
+  .contract-card ul { margin: 10px 0 14px; padding-left: 20px; }
+  .contract-card li { margin-bottom: 6px; }
+  .contract-card .small { font-size: 14px; color: #4A4636; margin: 12px 0 0; }
+  .dark-card { background: #10120E; color: #F5F2E8; border-radius: 18px; padding: 20px; }
+  .dark-card p { margin: 0 0 12px; }
+  .dark-card p:last-child { margin-bottom: 0; }
+  details.faq { background: #FFFFFF; border: 1px solid #D4D2C8; border-radius: 14px; padding: 14px 18px; margin-bottom: 10px; }
+  details.faq summary { font-weight: 700; cursor: pointer; font-size: 17px; }
+  details.faq p { margin: 10px 0 2px; color: #3A3B33; }
+  form.card { padding: 20px; }
+  .field { margin-bottom: 14px; }
+  .field label { display: block; font-weight: 600; font-size: 15.5px; margin-bottom: 6px; }
+  .field input, .field select, .field textarea { width: 100%; padding: 13px 12px; border: 1px solid #D4D2C8; border-radius: 10px; font-size: 16px; font-family: inherit; background: #FFFFFF; color: #14150F; }
+  .field .err-msg { display: none; color: #D43D2A; font-size: 14px; margin-top: 5px; }
+  .field.invalid input, .field.invalid select { border-color: #D43D2A; }
+  .field.invalid .err-msg { display: block; }
+  .form-note { font-size: 15px; color: #3A3B33; margin: 4px 0 12px; }
+  #fallback { display: none; margin: 12px 0 0; font-size: 15px; }
+  #fallback a { color: #14150F; font-weight: 700; }
+  .sticky { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 50; max-width: 656px; margin: 0 auto; }
+  .sticky .btn { box-shadow: 0 8px 24px rgba(20,21,15,.25); }
+  @media (min-width: 720px) {
+    h1 { font-size: 40px; }
+    .hero-btns { display: flex; gap: 12px; }
+    .hero-btns .btn { width: auto; flex: 1; }
+    .btn.ghost { margin-top: 0; }
+  }
 </style>
 </head>
 <body>
-<section class="hero">
 <div class="wrap">
-<h1>Планируешь купить автомобиль в США?</h1>
-<p class="hook">Не подписывай договор, пока не разберёшь все цифры.</p>
-<p class="hero-sub">Команда проверит твою сделку до подписания и покажет, из чего складываются условия: цену, допы, ставку и платёж ты увидишь в одном разборе.</p>
-<a class="btn btn-hero" href="#form">Обсудить условия покупки</a>
-<p class="micro">Заявка займёт 1 минуту</p>
+
+  <header class="hero">
+    <div class="kicker-line">
+      <img src="data:image/jpeg;base64,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" alt="Дмитрий Малинников">
+      <span>Дмитрий Малинников · Новые авто в США</span>
+    </div>
+    <h1>Дилер зарабатывает на том, чего вы не знаете</h1>
+    <p class="hero-sub">Мы найдём автомобиль под ваш запрос, сравним предложения и согласуем условия покупки или лизинга. Переговоры с дилерами ведём мы. В большинстве случаев нам платит дилер - для вас услуга ничего не стоит.</p>
+    <div class="hero-btns">
+      <a class="btn gold" href="#form">Оставить заявку</a>
+      <a class="btn ghost" href="#contract">У меня есть контракт от дилера</a>
+    </div>
+  </header>
+
+  <section>
+    <p class="kick">01 · Ловушки</p>
+    <h2>3 ситуации, в которых легко переплатить</h2>
+    <div class="card trap">
+      <p class="prob">В объявлении одна цена, а в предложении появляются дополнительные расходы</p>
+      <p class="sol"><span class="check">✓</span> Мы запрашиваем письменную цену под ключ и показываем каждую строку до подписания.</p>
+    </div>
+    <div class="card trap">
+      <p class="prob">Низкий платёж в месяц трудно оценить без срока и первого взноса</p>
+      <p class="sol"><span class="check">✓</span> Мы считаем полную стоимость сделки, а не только платёж в месяц.</p>
+    </div>
+    <div class="card trap">
+      <p class="prob">Предложения разных дилеров сложно сравнить между собой</p>
+      <p class="sol"><span class="check">✓</span> Мы сводим предложения в одно понятное сравнение в цифрах.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="kick">02 · Процесс</p>
+    <h2>Как проходит работа</h2>
+    <div class="card step">
+      <div class="num">1</div>
+      <p>Вы оставляете запрос: автомобиль, бюджет, штат и срок покупки. Я лично уточняю задачу и подключаю партнёров.</p>
+    </div>
+    <div class="card step">
+      <div class="num">2</div>
+      <p>Моя команда ищет автомобиль, сравнивает предложения и ведёт переговоры с дилерами.</p>
+    </div>
+    <div class="card step">
+      <div class="num">3</div>
+      <p>До подписания вы получаете разбор согласованных условий. Автомобиль доставим к вашему дому.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="kick">03 · О сервисе</p>
+    <h2>Кто стоит за сервисом</h2>
+    <div class="card team">
+      <img src="data:image/jpeg;base64,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" alt="Дмитрий Малинников">
+      <p>Меня зовут Дмитрий Малинников. Лично принимаю ваш запрос, уточняю задачу и передаю её Алексею и Диме - они ищут автомобиль, работают с дилерами, сравнивают предложения и согласовывают условия. Сервис существует, чтобы вы не ехали к дилеру, а покупали через нас: заранее понимаете стоимость автомобиля и все условия - и подписываете только проверенный договор.</p>
+      <a class="btn gold" href="#form">Обсудить покупку</a>
+    </div>
+  </section>
+
+  <section id="contract">
+    <p class="kick">04 · Контракт</p>
+    <h2>Проверим ваш контракт бесплатно</h2>
+    <div class="contract-card">
+      <p style="margin:0;">Пришлите контракт или расчёт дилера - разберём документ по строкам и покажем:</p>
+      <ul>
+        <li>цену автомобиля и дилерские сборы;</li>
+        <li>дополнительные опции и страховки;</li>
+        <li>условия финансирования и итоговую сумму;</li>
+        <li>как изменится платёж без отдельных допов и сборов.</li>
+      </ul>
+      <p style="margin:0 0 16px;">Если сделка ещё не закрыта, при желании подключимся к переговорам с дилером. Если автомобиль уже куплен - объясним, из чего сложилась итоговая цена.</p>
+      <a class="btn gold" href="https://wa.me/19544772740?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%B8%D1%81%D0%BB%D0%B0%D1%82%D1%8C%20%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%B0%D0%BA%D1%82%20%D0%BD%D0%B0%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D1%83." target="_blank" rel="noopener">Отправить документ на проверку</a>
+      <p class="small">Можно закрыть личные данные перед отправкой. Разбор бесплатный и ни к чему не обязывает. Проверка носит информационный характер и не является юридической консультацией.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="kick">05 · Условия</p>
+    <h2>Стоимость и границы услуги</h2>
+    <div class="dark-card">
+      <p>В большинстве случаев нам платит дилер - для вас услуга ничего не стоит.</p>
+      <p>Работаем только с новыми автомобилями и только по США. Экспорт не оформляем.</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="kick">06 · Вопросы</p>
+    <h2>Частые вопросы</h2>
+    <details class="faq">
+      <summary>Сколько стоит ваша помощь?</summary>
+      <p>В большинстве случаев нам платит дилер - для вас услуга ничего не стоит.</p>
+    </details>
+    <details class="faq">
+      <summary>Что нужно, чтобы начать?</summary>
+      <p>Оставьте заявку ниже: машина, бюджет, штат и срок покупки. Дальше я свяжусь с вами в WhatsApp и уточню задачу.</p>
+    </details>
+    <details class="faq">
+      <summary>У меня уже есть предложение от дилера. Что делать?</summary>
+      <p>Пришлите контракт на бесплатную проверку - разберём документ по строкам и покажем, из чего складывается итоговая сумма. Если сделка ещё не закрыта, подключимся к переговорам.</p>
+    </details>
+    <details class="faq">
+      <summary>Вы работаете в моём штате?</summary>
+      <p>Работаем по всем США. Автомобиль доставим к вашему дому.</p>
+    </details>
+  </section>
+
+  <section id="form">
+    <p class="kick">07 · Заявка</p>
+    <h2>Оставьте заявку</h2>
+    <form class="card" id="leadForm" novalidate>
+      <p class="form-note" style="margin-top:0;">Несколько вопросов о машине, бюджете и сроках - дальше я свяжусь с вами в WhatsApp.</p>
+
+      <div class="field" id="wrap_name">
+        <label for="f_name">Имя *</label>
+        <input id="f_name" type="text" autocomplete="name">
+        <div class="err-msg">Заполните это поле</div>
+      </div>
+
+      <div class="field" id="wrap_state">
+        <label for="f_state">Штат *</label>
+        <select id="f_state">
+          <option value="">Выберите ответ</option>
+          <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>District of Columbia</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option>
+        </select>
+        <div class="err-msg">Заполните это поле</div>
+      </div>
+
+      <div class="field" id="wrap_when">
+        <label for="f_when">Когда планируете покупку *</label>
+        <select id="f_when">
+          <option value="">Выберите ответ</option>
+          <option>До 30 дней</option>
+          <option>Через 1-3 месяца</option>
+          <option>Пока изучаю варианты</option>
+        </select>
+        <div class="err-msg">Заполните это поле</div>
+      </div>
+
+      <div class="field">
+        <label for="f_car">Какая машина интересует</label>
+        <input id="f_car" type="text">
+      </div>
+
+      <div class="field">
+        <label for="f_method">Как планируете покупать</label>
+        <select id="f_method">
+          <option value="">Выберите ответ</option>
+          <option>Наличные</option>
+          <option>Кредит</option>
+          <option>Лизинг</option>
+          <option>Пока не решил</option>
+        </select>
+      </div>
+
+      <div class="field" id="wrap_budget">
+        <label for="f_budget">Примерный бюджет *</label>
+        <input id="f_budget" type="text" inputmode="numeric">
+        <div class="err-msg">Заполните это поле</div>
+      </div>
+
+      <div class="field" id="wrap_pay" style="display:none;">
+        <label for="f_pay">Желаемый платёж в месяц</label>
+        <input id="f_pay" type="text" inputmode="numeric">
+      </div>
+
+      <div class="field">
+        <label for="f_trade">Трейд-ин (сдаёте свою машину?)</label>
+        <select id="f_trade">
+          <option value="">Выберите ответ</option>
+          <option>Да</option>
+          <option>Нет</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="f_comment">Комментарий</label>
+        <textarea id="f_comment" rows="3"></textarea>
+      </div>
+
+      <p class="form-note">Откроется WhatsApp с заполненным сообщением. Отправьте его, чтобы мы получили запрос.</p>
+      <button type="submit" class="btn gold">Отправить в WhatsApp</button>
+      <p id="fallback">Если WhatsApp не открылся сам - <a id="fallbackLink" href="#" target="_blank" rel="noopener">нажмите сюда</a></p>
+    </form>
+  </section>
+
 </div>
-</section>
-<section>
-<div class="wrap">
-<h2>4 ловушки, в которые попадают <span class="gold">покупатели в США</span></h2>
-<div class="card"><h3>В рекламе одна цена, в договоре - другая</h3><p>Допы, страховки и проценты, которых ты не просил, появляются уже у стола подписания. А ты уже приехал, потратил день и морально готов.</p></div>
-<div class="card"><h3>Ты покупаешь машину раз в несколько лет. Они продают каждый день</h3><p>Разговор изначально неравный: ты не знаешь реальных цен, программ и своих прав - у дилера больше опыта и информации о своих программах.</p></div>
-<div class="card"><h3>Кредит или лизинг? Какая ставка честная?</h3><p>Самому не разобраться: накрутили ставку или нет, нужен ли даунпеймент, какой платёж реальный.</p></div>
-<div class="card"><h3>Подписал - и всё</h3><p>После подписания изменить условия обычно значительно сложнее, даже если через час понял, что переплатил.</p></div>
+
+<div class="sticky" id="stickyBar">
+  <a class="btn gold" href="#form">Обсудить покупку</a>
 </div>
-</section>
-<section>
-<div class="wrap">
-<h2>Что делает команда</h2>
-<ul class="check">
-<li>Сравниваем цены и программы нескольких дилеров. Ведём переговоры за тебя.</li>
-<li>Проверяем допы и отмечаем, какие из них можно обсуждать или исключать. Запрашиваем письменное подтверждение цены под ключ - до подписания.</li>
-<li>Сравниваем доступные варианты кредита и лизинга под твою историю. Считаем, нужен ли даунпеймент и какой.</li>
-<li>Оцениваем трейд-ин, чтобы ты не отдал машину за бесценок.</li>
-<li>Большую часть коммуникации проводим онлайн.</li>
-</ul>
-</div>
-</section>
-<section>
-<div class="wrap">
-<h2>Что у тебя будет до подписания</h2>
-<ul class="check">
-<li>Письменная цена под ключ - финальная сумма, а не «цена в рекламе».</li>
-<li>Разбор каждого допа: что обязательно, а что можно убрать.</li>
-<li>Сравнение кредита и лизинга в цифрах - под твою историю.</li>
-<li>Понятный платёж в месяц - с расшифровкой суммы до подписания.</li>
-</ul>
-</div>
-</section>
-<section>
-<div class="wrap">
-<h2>Уже есть предложение от дилера? <span class="gold">Пришли - разберём по строкам</span></h2>
-<p class="sub">Покажем, какие строки в твоём договоре посчитаны, а не взяты из тарифа: накрученный service fee, rebate, который не уменьшил стоимость машины, сборы, которые придут уже после подписания. С формулами, которые ты можешь перепроверить сам.</p>
-<a class="btn btn-hero" href="https://wa.me/19544772740?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%B8%D1%81%D0%BB%D0%B0%D1%82%D1%8C%20%D0%B4%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%20%D0%BE%D1%82%20%D0%B4%D0%B8%D0%BB%D0%B5%D1%80%D0%B0%20%D0%BD%D0%B0%20%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80.">Прислать договор на разбор</a>
-<p class="micro">Бесплатно и ни к чему не обязывает</p>
-<p class="disclaimer">Разбор основан на предоставленных документах, носит информационный характер и не является юридической консультацией.</p>
-</div>
-</section>
-<section>
-<div class="wrap">
-<h2>Кто мы</h2>
-<div class="team">
-<div class="team-top">
-<img class="team-photo" src="data:image/jpeg;base64,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" alt="Дмитрий Малинников">
-<div><p class="team-name">Дмитрий Малинников</p><p>Я отвечаю за то, чтобы ты понимал каждую цифру до подписания.</p></div>
-</div>
-<p>Со мной команда: финансист, который разбирает договоры и ведёт переговоры с дилерами, и куратор, который ведёт тебя от первого сообщения до ключей.</p>
-<p>Честность - наш главный продукт. Если видим спорные или неясные условия - прямо на них укажем.</p>
-</div>
-</div>
-</section>
-<section>
-<div class="wrap">
-<h2>Сколько это стоит</h2>
-<div class="price">
-<p>За <strong>сопровождение покупки нового автомобиля через дилера</strong> вознаграждение нашей команде платит дилер.</p>
-<p style="font-size:14px;color:#8a8a8a">Работаем только по США и только с автомобилями с clean title. Экспорт не оформляем.</p>
-</div>
-</div>
-</section>
-<section id="form">
-<div class="wrap">
-<h2>Оставь заявку - <span class="gold">разберём твою ситуацию</span></h2>
-<p class="sub">Заполни форму, нажми кнопку - откроется WhatsApp с готовым сообщением. Просто отправь его, и я свяжусь с тобой.</p>
-<form id="leadForm">
-<label>Имя</label>
-<input name="name" required placeholder="Как к тебе обращаться">
-<label>Штат</label>
-<input name="state" required placeholder="Например: Флорида">
-<label>Когда планируешь покупку</label>
-<select name="timing"><option>В ближайший месяц</option><option>Через 2-3 месяца</option><option>Пока присматриваюсь</option></select>
-<label>Какая машина интересует</label>
-<input name="car" placeholder="Марка и модель, например Toyota Camry">
-<label>Новая или с пробегом</label>
-<select name="cond"><option>Новая</option><option>С пробегом (CPO)</option><option>Пока не решил</option></select>
-<label>Трейд-ин</label>
-<select name="trade"><option>Нет</option><option>Да</option></select>
-<label>Бюджет или комфортный платёж в месяц</label>
-<input name="budget" placeholder="Например: до $500/мес">
-<label>Что-то ещё, что нам важно знать</label>
-<textarea name="notes" rows="3" placeholder="Необязательно"></textarea>
-<div style="height:18px"></div>
-<button class="btn btn-submit" type="submit">Отправить в WhatsApp</button>
-<p class="micro">Нажимая кнопку, ты перейдёшь в WhatsApp с готовым сообщением</p>
-</form>
-</div>
-</section>
-<footer>
-<div class="wrap">
-<p>Работаем только по США.</p>
-<p>Instagram: <a href="https://www.instagram.com/dmitry_miami/">@dmitry_miami</a></p>
-</div>
-</footer>
+
 <script>
-document.getElementById('leadForm').addEventListener('submit',function(e){
-e.preventDefault();
-var f=new FormData(e.target),g=function(k){return (f.get(k)||'').trim()};
-var lines=[
-'Здравствуйте, Дмитрий! Заявка с лендинга.',
-'Имя: '+g('name'),
-'Штат: '+g('state'),
-'Сроки: '+g('timing'),
-'Машина: '+g('car'),
-'Состояние: '+g('cond'),
-'Бюджет/платёж: '+g('budget'),
-'Трейд-ин: '+g('trade')
-];
-if(g('notes'))lines.push('Дополнительно: '+g('notes'));
-window.open('https://wa.me/19544772740?text='+encodeURIComponent(lines.join('
-')),'_blank');
-});
+(function () {
+  var form = document.getElementById('leadForm');
+  var method = document.getElementById('f_method');
+  var payWrap = document.getElementById('wrap_pay');
+
+  method.addEventListener('change', function () {
+    var v = method.value;
+    payWrap.style.display = (v === 'Кредит' || v === 'Лизинг') ? 'block' : 'none';
+  });
+
+  function markInvalid(wrapId, bad) {
+    var w = document.getElementById(wrapId);
+    if (w) w.classList.toggle('invalid', bad);
+    return !bad;
+  }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('f_name').value.trim();
+    var state = document.getElementById('f_state').value;
+    var when = document.getElementById('f_when').value;
+    var car = document.getElementById('f_car').value.trim();
+    var m = method.value;
+    var budget = document.getElementById('f_budget').value.trim();
+    var pay = document.getElementById('f_pay').value.trim();
+    var trade = document.getElementById('f_trade').value;
+    var comment = document.getElementById('f_comment').value.trim();
+
+    var ok = true;
+    ok = markInvalid('wrap_name', !name) && ok;
+    ok = markInvalid('wrap_state', !state) && ok;
+    ok = markInvalid('wrap_when', !when) && ok;
+    ok = markInvalid('wrap_budget', !budget) && ok;
+    if (!ok) {
+      var first = form.querySelector('.field.invalid input, .field.invalid select');
+      if (first) first.focus();
+      return;
+    }
+
+    var lines = [];
+    lines.push('Новая заявка с лендинга');
+    lines.push('Имя: ' + name);
+    lines.push('Штат: ' + state);
+    lines.push('Когда покупка: ' + when);
+    if (car) lines.push('Машина: ' + car);
+    if (m) lines.push('Способ покупки: ' + m);
+    lines.push('Бюджет: ' + budget);
+    if ((m === 'Кредит' || m === 'Лизинг') && pay) lines.push('Желаемый платёж: ' + pay);
+    if (trade) lines.push('Трейд-ин: ' + trade);
+    if (comment) lines.push('Комментарий: ' + comment);
+
+    var url = 'https://wa.me/19544772740?text=' + encodeURIComponent(lines.join('\n'));
+    var fb = document.getElementById('fallback');
+    var link = document.getElementById('fallbackLink');
+    link.href = url;
+    fb.style.display = 'block';
+    window.open(url, '_blank');
+  });
+
+  var sticky = document.getElementById('stickyBar');
+  var formSection = document.getElementById('form');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        sticky.style.display = en.isIntersecting ? 'none' : 'block';
+      });
+    }, { threshold: 0.08 });
+    io.observe(formSection);
+  }
+})();
 </script>
 </body>
 </html>
