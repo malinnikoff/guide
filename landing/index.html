@@ -8,37 +8,41 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0e0e10;color:#f2f2f2;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
 .wrap{max-width:640px;margin:0 auto;padding:0 20px}
-section{padding:44px 0;border-bottom:1px solid #222}
-h2{font-size:24px;line-height:1.3;margin-bottom:20px}
+section{padding:40px 0;border-bottom:1px solid #222}
+h2{font-size:26px;line-height:1.2;margin-bottom:20px}
 h2 .gold{color:#E8B64C}
 p.sub{font-size:17px;color:#c9c9c9;margin-bottom:26px}
-.btn{display:block;width:100%;background:#E8B64C;color:#161618;font-weight:700;font-size:18px;text-align:center;padding:16px;border-radius:12px;text-decoration:none;border:none;cursor:pointer}
+.btn{display:block;background:#E8B64C;color:#161618;font-weight:700;text-align:center;border-radius:12px;text-decoration:none;border:none;cursor:pointer}
 .btn:active{transform:scale(.98)}
-.micro{font-size:13px;color:#8a8a8a;text-align:center;margin-top:12px}
-.card{background:#17171a;border:1px solid #26262b;border-radius:14px;padding:18px;margin-bottom:14px}
+.btn-hero{width:fit-content;max-width:300px;margin:0 auto;padding:15px 30px;font-size:16px}
+.micro{font-size:13px;color:#8a8a8a;text-align:center;margin-top:14px}
+.card{background:#17171a;border:1px solid #2A2A2E;border-radius:14px;padding:20px;margin-bottom:14px}
 .card h3{font-size:17px;margin-bottom:8px}
-.card p{font-size:15px;color:#c9c9c9}
+.card p{font-size:16px;line-height:1.55;color:#C8C8CC}
 .check{list-style:none}
-.check li{font-size:16px;padding:10px 0 10px 34px;position:relative;border-bottom:1px solid #1e1e22}
+.check li{font-size:16px;line-height:1.55;color:#C8C8CC;padding:10px 0 10px 34px;position:relative;border-bottom:1px solid #1e1e22}
 .check li:last-child{border:none}
-.check li:before{content:"✓";color:#E8B64C;font-weight:700;position:absolute;left:6px}
+.check li:before{content:"✓";color:#E8B64C;font-weight:700;font-size:18px;position:absolute;left:6px;top:10px}
 .team{background:#17171a;border-radius:14px;padding:20px}
-.team p{font-size:15px;color:#c9c9c9;margin-bottom:10px}
+.team-top{display:flex;gap:18px;align-items:center;margin-bottom:14px}
+.team-photo{width:140px;height:140px;border-radius:50%;object-fit:cover;border:2px solid #E8B64C;flex-shrink:0}
+.team p{font-size:16px;line-height:1.55;color:#C8C8CC;margin-bottom:10px}
 .team p strong{color:#f2f2f2}
+.team-name{font-size:20px;font-weight:800;color:#f2f2f2 !important;margin-bottom:4px !important}
+@media(max-width:768px){.team-top{flex-direction:column;text-align:center}}
 .price{background:#17171a;border:1px solid #E8B64C;border-radius:14px;padding:20px}
 .price p{font-size:16px;margin-bottom:8px}
-label{display:block;font-size:14px;color:#c9c9c9;margin:14px 0 6px}
-input,select,textarea{width:100%;background:#17171a;border:1px solid #333;color:#f2f2f2;font-size:16px;padding:13px;border-radius:10px;font-family:inherit}
+label{display:block;font-size:14px;color:#C8C8CC;margin:12px 0 6px}
+input,select,textarea{width:100%;background:#17171a;border:1px solid #333;color:#f2f2f2;font-size:16px;padding:14px;border-radius:10px;font-family:inherit}
 input:focus,select:focus,textarea:focus{outline:none;border-color:#E8B64C}
-.row2{display:flex;gap:12px}
-.row2>div{flex:1}
+.btn-submit{display:block;max-width:320px;margin:20px auto 0;padding:15px 30px;font-size:16px}
+.disclaimer{font-size:13px;color:#8a8a8a;margin-top:16px}
 footer{padding:28px 0 40px;text-align:center;font-size:13px;color:#8a8a8a}
 footer a{color:#E8B64C;text-decoration:none}
-.hero{padding:64px 0 48px}
+.hero{padding:56px 0 36px}
 .hero h1{font-size:34px;line-height:1.2;letter-spacing:-0.5px;font-weight:800;margin-bottom:18px;color:#f2f2f2}
 .hero .hook{font-size:20px;font-weight:600;color:#E8B64C;line-height:1.4;margin-bottom:18px}
 .hero .hero-sub{font-size:16px;color:#c9c9c9;margin-bottom:30px}
-.btn-hero{display:block;width:fit-content;margin:0 auto;padding:16px 48px;font-size:17px}
 </style>
 </head>
 <body>
@@ -62,7 +66,7 @@ footer a{color:#E8B64C;text-decoration:none}
 </section>
 <section>
 <div class="wrap">
-<h2>Что делает <span class="gold">команда</span></h2>
+<h2>Что делает команда</h2>
 <ul class="check">
 <li>Сравниваем цены и программы нескольких дилеров. Ведём переговоры за тебя.</li>
 <li>Проверяем допы и отмечаем, какие из них можно обсуждать или исключать. Запрашиваем письменное подтверждение цены под ключ - до подписания.</li>
@@ -74,7 +78,7 @@ footer a{color:#E8B64C;text-decoration:none}
 </section>
 <section>
 <div class="wrap">
-<h2>Что у тебя будет <span class="gold">до подписания</span></h2>
+<h2>Что у тебя будет до подписания</h2>
 <ul class="check">
 <li>Письменная цена под ключ - финальная сумма, а не «цена в рекламе».</li>
 <li>Разбор каждого допа: что обязательно, а что можно убрать.</li>
@@ -85,10 +89,22 @@ footer a{color:#E8B64C;text-decoration:none}
 </section>
 <section>
 <div class="wrap">
+<h2>Уже есть предложение от дилера? <span class="gold">Пришли - разберём по строкам</span></h2>
+<p class="sub">Покажем, какие строки в твоём договоре посчитаны, а не взяты из тарифа: накрученный service fee, rebate, который не уменьшил стоимость машины, сборы, которые придут уже после подписания. С формулами, которые ты можешь перепроверить сам.</p>
+<a class="btn btn-hero" href="https://wa.me/19544772740?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BF%D1%80%D0%B8%D1%81%D0%BB%D0%B0%D1%82%D1%8C%20%D0%B4%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%20%D0%BE%D1%82%20%D0%B4%D0%B8%D0%BB%D0%B5%D1%80%D0%B0%20%D0%BD%D0%B0%20%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80.">Прислать договор на разбор</a>
+<p class="micro">Бесплатно и ни к чему не обязывает</p>
+<p class="disclaimer">Разбор основан на предоставленных документах, носит информационный характер и не является юридической консультацией.</p>
+</div>
+</section>
+<section>
+<div class="wrap">
 <h2>Кто мы</h2>
 <div class="team">
-<p><strong>Дмитрий, Майами.</strong> Я отвечаю за то, чтобы ты понимал каждую цифру до подписания.</p>
-<p>Со мной команда: <strong>Алекс</strong> ведёт переговоры, финансы и сделки, <strong>Дима</strong> ведёт клиентов от первого сообщения до ключей.</p>
+<div class="team-top">
+<img class="team-photo" src="assets/dmitry.jpg" alt="Дмитрий Малинников">
+<div><p class="team-name">Дмитрий Малинников</p><p>Я отвечаю за то, чтобы ты понимал каждую цифру до подписания.</p></div>
+</div>
+<p>Со мной команда: финансист, который разбирает договоры и ведёт переговоры с дилерами, и куратор, который ведёт тебя от первого сообщения до ключей.</p>
 <p>Честность - наш главный продукт. Если видим спорные или неясные условия - прямо на них укажем.</p>
 </div>
 </div>
@@ -98,7 +114,6 @@ footer a{color:#E8B64C;text-decoration:none}
 <h2>Сколько это стоит</h2>
 <div class="price">
 <p>За <strong>сопровождение покупки нового автомобиля через дилера</strong> вознаграждение нашей команде платит дилер.</p>
-<p>Подбор с аукциона или б/у - <strong>$1,000</strong>.</p>
 <p style="font-size:14px;color:#8a8a8a">Работаем только по США и только с автомобилями с clean title. Экспорт не оформляем.</p>
 </div>
 </div>
@@ -110,22 +125,22 @@ footer a{color:#E8B64C;text-decoration:none}
 <form id="leadForm">
 <label>Имя</label>
 <input name="name" required placeholder="Как к тебе обращаться">
-<div class="row2">
-<div><label>Штат</label><input name="state" required placeholder="Например: Флорида"></div>
-<div><label>Когда планируешь покупку</label><select name="timing"><option>В ближайший месяц</option><option>Через 2-3 месяца</option><option>Пока присматриваюсь</option></select></div>
-</div>
+<label>Штат</label>
+<input name="state" required placeholder="Например: Флорида">
+<label>Когда планируешь покупку</label>
+<select name="timing"><option>В ближайший месяц</option><option>Через 2-3 месяца</option><option>Пока присматриваюсь</option></select>
 <label>Какая машина интересует</label>
 <input name="car" placeholder="Марка и модель, например Toyota Camry">
-<div class="row2">
-<div><label>Новая или с пробегом</label><select name="cond"><option>Новая</option><option>С пробегом (CPO)</option><option>Пока не решил</option></select></div>
-<div><label>Трейд-ин</label><select name="trade"><option>Нет</option><option>Да</option></select></div>
-</div>
+<label>Новая или с пробегом</label>
+<select name="cond"><option>Новая</option><option>С пробегом (CPO)</option><option>Пока не решил</option></select>
+<label>Трейд-ин</label>
+<select name="trade"><option>Нет</option><option>Да</option></select>
 <label>Бюджет или комфортный платёж в месяц</label>
 <input name="budget" placeholder="Например: до $500/мес">
 <label>Что-то ещё, что нам важно знать</label>
 <textarea name="notes" rows="3" placeholder="Необязательно"></textarea>
 <div style="height:18px"></div>
-<button class="btn" type="submit">Отправить в WhatsApp</button>
+<button class="btn btn-submit" type="submit">Отправить в WhatsApp</button>
 <p class="micro">Нажимая кнопку, ты перейдёшь в WhatsApp с готовым сообщением</p>
 </form>
 </div>
@@ -151,7 +166,8 @@ var lines=[
 'Трейд-ин: '+g('trade')
 ];
 if(g('notes'))lines.push('Дополнительно: '+g('notes'));
-window.open('https://wa.me/19544772740?text='+encodeURIComponent(lines.join('\n')),'_blank');
+window.open('https://wa.me/19544772740?text='+encodeURIComponent(lines.join('
+')),'_blank');
 });
 </script>
 </body>
